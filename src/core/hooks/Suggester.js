@@ -209,6 +209,332 @@ export default class Suggester extends SyntaxBase {
         callback(suggestList);
       },
     });
+    suggester.unshift({
+      keyword: '·',
+      suggestList(word, callback) {
+        const $word = word.replace(/^\//, '');
+        // 加个空格就直接退出联想
+        if (/^\s$/.test($word)) {
+          callback(false);
+          return;
+        }
+        const suggestList = [
+          {
+            icon: '',
+            label: '半角 `',
+            keyword: '`',
+            value: '` ',
+          },
+        ];
+        callback(suggestList);
+      },
+    });
+    suggester.unshift({
+      keyword: '···',
+      suggestList(word, callback) {
+        const $word = word.replace(/^\//, '');
+        // 加个空格就直接退出联想
+        if (/^\s$/.test($word)) {
+          callback(false);
+          return;
+        }
+        const suggestList = [
+          {
+            icon: '',
+            label: '半角 `',
+            keyword: '`',
+            value: '` ',
+          },
+        ];
+        callback(suggestList);
+      },
+    });
+    suggester.unshift({
+      keyword: '￥',
+      suggestList(word, callback) {
+        const $word = word.replace(/^\//, '');
+        // 加个空格就直接退出联想
+        if (/^\s$/.test($word)) {
+          callback(false);
+          return;
+        }
+        const suggestList = [
+          {
+            icon: '',
+            label: '半角 $',
+            keyword: '`',
+            value: '$ ',
+          },
+        ];
+        callback(suggestList);
+      },
+    });
+    suggester.unshift({
+      keyword: '：',
+      suggestList(word, callback) {
+        const $word = word.replace(/^\//, '');
+        // 加个空格就直接退出联想
+        if (/^\s$/.test($word)) {
+          callback(false);
+          return;
+        }
+        const suggestList = [
+          {
+            icon: '',
+            label: '半角 :',
+            keyword: '`',
+            value: ': ',
+          },
+        ];
+        callback(suggestList);
+      },
+    });
+    suggester.unshift({
+      keyword: '”',
+      suggestList(word, callback) {
+        const $word = word.replace(/^\//, '');
+        // 加个空格就直接退出联想
+        if (/^\s$/.test($word)) {
+          callback(false);
+          return;
+        }
+        const suggestList = [
+          {
+            icon: '',
+            label: '半角 "',
+            keyword: '`',
+            value: '" ',
+          },
+        ];
+        callback(suggestList);
+      },
+    });
+    suggester.unshift({
+      keyword: '“',
+      suggestList(word, callback) {
+        const $word = word.replace(/^\//, '');
+        // 加个空格就直接退出联想
+        if (/^\s$/.test($word)) {
+          callback(false);
+          return;
+        }
+        const suggestList = [
+          {
+            icon: '',
+            label: '半角 "',
+            keyword: '`',
+            value: '" ',
+          },
+        ];
+        callback(suggestList);
+      },
+    });
+    suggester.unshift({
+      keyword: '、',
+      suggestList(word, callback) {
+        const $word = word.replace(/^\//, '');
+        // 加个空格就直接退出联想
+        if (/^\s$/.test($word)) {
+          callback(false);
+          return;
+        }
+        const suggestList = [
+          {
+            icon: '',
+            label: '半角 /',
+            keyword: '`',
+            value: '/ ',
+          },
+          {
+            icon: '',
+            label: '半角 \\',
+            keyword: '`',
+            value: '\\ ',
+          },
+        ];
+        callback(suggestList);
+      },
+    });
+    suggester.unshift({
+      keyword: '【',
+      suggestList(word, callback) {
+        const $word = word.replace(/^\//, '');
+        // 加个空格就直接退出联想
+        if (/^\s$/.test($word)) {
+          callback(false);
+          return;
+        }
+        const suggestList = [
+          {
+            icon: '',
+            label: '半角 [',
+            keyword: '`',
+            value: '[ ',
+          },
+          {
+            icon: '',
+            label: '半角 ]',
+            keyword: '`',
+            value: '] ',
+          },
+          {
+            icon: '',
+            label: '[]',
+            keyword: '`',
+            value: '[] ',
+          },
+          {
+            icon: '',
+            label: '[alt](url)',
+            keyword: '`',
+            value: '[alt](url)',
+          },
+        ];
+        callback(suggestList);
+      },
+    });
+    suggester.unshift({
+      keyword: '】',
+      suggestList(word, callback) {
+        const $word = word.replace(/^\//, '');
+        // 加个空格就直接退出联想
+        if (/^\s$/.test($word)) {
+          callback(false);
+          return;
+        }
+        const suggestList = [
+          {
+            icon: '',
+            label: '半角 [',
+            keyword: '`',
+            value: '[ ',
+          },
+          {
+            icon: '',
+            label: '半角 ]',
+            keyword: '`',
+            value: '] ',
+          },
+        ];
+        callback(suggestList);
+      },
+    });
+    suggester.unshift({
+      keyword: '（',
+      suggestList(word, callback) {
+        const $word = word.replace(/^\//, '');
+        // 加个空格就直接退出联想
+        if (/^\s$/.test($word)) {
+          callback(false);
+          return;
+        }
+        const suggestList = [
+          {
+            icon: '',
+            label: '半角 (',
+            keyword: '`',
+            value: '( ',
+          },
+          {
+            icon: '',
+            label: '半角 )',
+            keyword: '`',
+            value: ') ',
+          },
+          {
+            icon: '',
+            label: '半角 ()',
+            keyword: '`',
+            value: '() ',
+          },
+          {
+            icon: '',
+            label: '（）',
+            keyword: '`',
+            value: '（） ',
+          },
+        ];
+        callback(suggestList);
+      },
+    });
+    suggester.unshift({
+      keyword: '）',
+      suggestList(word, callback) {
+        const $word = word.replace(/^\//, '');
+        // 加个空格就直接退出联想
+        if (/^\s$/.test($word)) {
+          callback(false);
+          return;
+        }
+        const suggestList = [
+          {
+            icon: '',
+            label: '半角 (',
+            keyword: '`',
+            value: '( ',
+          },
+          {
+            icon: '',
+            label: '半角 )',
+            keyword: '`',
+            value: ') ',
+          },
+        ];
+        callback(suggestList);
+      },
+    });
+    suggester.unshift({
+      keyword: '《',
+      suggestList(word, callback) {
+        const $word = word.replace(/^\//, '');
+        // 加个空格就直接退出联想
+        if (/^\s$/.test($word)) {
+          callback(false);
+          return;
+        }
+        const suggestList = [
+          {
+            icon: '',
+            label: '半角 <',
+            keyword: '`',
+            value: '< ',
+          },
+          {
+            icon: '',
+            label: '半角 >',
+            keyword: '`',
+            value: '> ',
+          },
+        ];
+        callback(suggestList);
+      },
+    });
+    suggester.unshift({
+      keyword: '》',
+      suggestList(word, callback) {
+        const $word = word.replace(/^\//, '');
+        // 加个空格就直接退出联想
+        if (/^\s$/.test($word)) {
+          callback(false);
+          return;
+        }
+        const suggestList = [
+          {
+            icon: '',
+            label: '半角 <',
+            keyword: '`',
+            value: '< ',
+          },
+          {
+            icon: '',
+            label: '半角 >',
+            keyword: '`',
+            value: '> ',
+          },
+        ];
+        callback(suggestList);
+      },
+    });
     suggester.forEach((configItem) => {
       if (!configItem.suggestList) {
         console.warn('[cherry-suggester]: the suggestList of config is missing.');
